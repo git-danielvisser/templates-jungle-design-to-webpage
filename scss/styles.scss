@@ -1,2 +1,54 @@
 @import "../node_modules/normalize-scss/sass/normalize";
 @include normalize();
+
+.block {
+    background: #f8f6f1;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &.--alt-color {
+        background-color: #ebe8e0;
+    }
+
+    $triangle_height: 54px;
+    &.--top-right-triangle,
+    &.--bottom-left-triangle,
+    &.--bottom-right-triangle {
+        &::after {
+            border-bottom: $triangle_height solid #ebb017;
+            border-left: $triangle_height solid transparent;
+            border-right: $triangle_height solid transparent;
+            content: "";
+            height: 0px;
+            position: absolute;
+            transform-origin: top;
+            width: 0px;
+        }
+    }
+
+    &.--top-right-triangle {
+        &::after {
+            right: 0;
+            top: 0;
+            transform: translate($triangle_height, 0) rotate(45deg);
+        }
+    }
+
+    &.--bottom-left-triangle {
+        &::after {
+            bottom: 0;
+            left: 0;
+            transform: translate(-$triangle_height, $triangle_height) rotate(-135deg);
+        }
+    }
+
+    &.--bottom-right-triangle {
+        &::after {
+            bottom: 0;
+            right: 0;
+            transform: translate($triangle_height, $triangle_height) rotate(135deg);
+        }
+    }
+}
