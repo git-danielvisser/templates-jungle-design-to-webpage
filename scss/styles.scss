@@ -225,3 +225,22 @@
         margin-top: 68px;
     }
 }
+
+/* --- Brands --- */
+.brands {
+    height: 227px;
+    border-bottom: 1px solid #72908b;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-left: -168px;
+    }
+
+    &__item {
+        margin-left: 168px;
+    }
+}
