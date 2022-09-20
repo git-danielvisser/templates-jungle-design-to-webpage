@@ -3,7 +3,7 @@
 @include normalize();
 
 /* --- Fonts --- */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 /* --- Typography --- */
 h1 {
@@ -35,9 +35,9 @@ h2 {
     color: #053634;
     font-family: "Work Sans", sans-serif;
     font-size: 1.625rem;
+    font-weight: 400;
     line-height: 180%;
     text-transform: capitalize;
-    font-weight: 400;
 }
 
 p {
@@ -106,10 +106,10 @@ p {
     border: solid 1px #a4b7b1;
     color: #053634;
     cursor: pointer;
+    display: inline-block;
     font-family: "Work Sans", sans-serif;
     font-size: 1rem;
     margin: 0;
-    display: inline-block;
     padding: 20px 32px;
     text-decoration: none;
     text-transform: uppercase;
@@ -310,20 +310,88 @@ p {
 
 /* --- About --- */
 .l-about {
+    box-sizing: border-box;
     display: flex;
     padding: 168px;
     width: 100%;
-    box-sizing: border-box;
 
     &__image-pair {
         flex: 1 0 691px;
     }
 
     &__article {
+        align-items: center;
+        display: flex;
         height: 829px;
         margin-left: 128px;
-        display: flex;
+    }
+}
+
+/* --- service --- */
+.l-services {
+    box-sizing: border-box;
+    display: flex;
+    padding: 168px;
+    width: 100%;
+
+    &__article {
+        width: 594px;
+    }
+
+    &__slideshow {
+        margin-left: 75px;
+        width: 914px;
+    }
+}
+
+.numbered-captions {
+    height: 68px;
+    width: 100%;
+
+    &__list {
         align-items: center;
+        counter-reset: Counter;
+        display: flex;
+        font-family: "Work Sans", sans-serif;
+        height: 100%;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        color: #72908b;
+        counter-increment: Counter;
+        display: flex;
+        font-size: 1.125em;
+        font-weight: 400;
+        line-height: 145%;
+        text-transform: capitalize;
+
+        &::before {
+            color: #72908b;
+            content: "0" counter(Counter) ".";
+            display: block;
+            font-size: 1.063em;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            margin-right: 10px;
+            text-transform: capitalize;
+        }
+
+        &.--current {
+            color: #053634;
+
+            &::before {
+                color: #053634;
+            }
+        }
+    }
+
+    &__separator {
+        background-color: #8eb3ac;
+        height: 100%;
+        margin: 0 30px;
+        width: 1px;
     }
 }
 
