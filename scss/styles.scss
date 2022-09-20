@@ -395,7 +395,55 @@ p {
     }
 }
 
+/* --- Portfolio --- */
+.l-portfolio {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 168px;
+
+    &__introduction {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    &__projects {
+        margin-top: 75px;
+    }
+}
+
+.projects {
+    &__grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding-top: 20px;
+    }
+
+    &__item {
+        &:nth-child(3n + 2) {
+            margin-top: -30px;
+        }
+    }
+}
+
+.project-preview {
+    &__caption {
+        font-size: 1.75rem;
+        line-height: 126%;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: #053634;
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+}
+
 /* --- Helpers --- */
+.--h-m-0 {
+    margin: 0;
+}
+
 .--h-mt-44 {
     margin-top: 44px;
 }
