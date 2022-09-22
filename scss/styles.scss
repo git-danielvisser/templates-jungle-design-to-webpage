@@ -40,6 +40,15 @@ h2 {
     text-transform: capitalize;
 }
 
+h4 {
+    color: #72908b;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 p {
     color: #053634;
     font-family: "Work Sans", sans-serif;
@@ -57,7 +66,7 @@ p {
     width: 100%;
 
     &.--alt-color {
-        background-color: #ebe8e0;
+        background-color: #f0f1ea;
     }
 
     $triangle_height: 54px;
@@ -388,7 +397,7 @@ p {
     }
 
     &__separator {
-        background-color: #8eb3ac;
+        background-color: #e0e2d8;
         height: 100%;
         margin: 0 30px;
         width: 1px;
@@ -397,15 +406,15 @@ p {
 
 /* --- Portfolio --- */
 .l-portfolio {
+    align-items: center;
     display: flex;
     flex-flow: column;
-    align-items: center;
     padding: 168px;
 
     &__introduction {
+        align-items: center;
         display: flex;
         flex-flow: column;
-        align-items: center;
     }
 
     &__projects {
@@ -429,13 +438,99 @@ p {
 
 .project-preview {
     &__caption {
-        font-size: 1.75rem;
-        line-height: 126%;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
         color: #053634;
+        font-size: 1.75rem;
+        letter-spacing: 0.02em;
+        line-height: 126%;
         margin-left: 20px;
         margin-top: 12px;
+        text-transform: capitalize;
+    }
+}
+
+/* --- Testimonials section --- */
+.l-testimonials-section {
+    padding: 168px;
+
+    &__testimonials {
+        margin-top: 75px;
+    }
+}
+
+.testimonials {
+    display: flex;
+    flex-flow: column;
+
+    &__row {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 42px;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    &__dot {
+        background-color: #d7dac6;
+        border-radius: 50%;
+        height: 10px;
+        margin: 0 14px;
+        width: 10px;
+
+        &.--current {
+            background-color: #053634;
+        }
+    }
+}
+
+.testimonial {
+    background-color: #f8f6f1;
+    border: 1px solid #ebe8e0;
+    box-sizing: border-box;
+    padding: 58px;
+    width: 500px;
+
+    &__message {
+        color: #053634;
+        font-family: "Work Sans", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 190%;
+    }
+
+    &__author {
+        align-items: center;
+        color: #053634;
+        display: flex;
+        font-size: 1.75rem;
+        letter-spacing: 0.02em;
+        line-height: 126%;
+        margin-top: 25px;
+        text-transform: capitalize;
+
+        &::before {
+            background: #dddfd5;
+            content: "";
+            display: block;
+            height: 1px;
+            margin-right: 25px;
+            width: 70px;
+        }
+    }
+
+    &__occupation {
+        color: #72908b;
+        font-family: "Work Sans", sans-serif;
+        font-size: 1rem;
+        line-height: 145%;
+        margin-left: 95px;
+        margin-top: 10px;
+        text-transform: capitalize;
     }
 }
 
