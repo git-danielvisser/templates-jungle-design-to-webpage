@@ -3,7 +3,7 @@
 @include normalize();
 
 /* --- Fonts --- */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 /* --- Typography --- */
 h1 {
@@ -134,9 +134,9 @@ p {
     }
 
     &.--primary {
-        color: #f8f6f1;
         background-color: #053634;
         border: none;
+        color: #f8f6f1;
     }
 
     &.--big {
@@ -583,14 +583,15 @@ p {
 }
 
 .email-field {
-    display: flex;
     align-items: center;
+    display: flex;
     max-width: 686px;
 }
 
 .input {
     background-color: transparent;
     border: 1px solid #b5c3be;
+    box-sizing: border-box;
     color: #053634;
     display: inline-block;
     font-family: "Work Sans", sans-serif;
@@ -598,7 +599,6 @@ p {
     height: 74px;
     line-height: 74px;
     padding: 0 37px;
-    box-sizing: border-box;
     width: 100%;
 
     &::placeholder {
@@ -613,6 +613,56 @@ p {
 
     &:focus {
         outline: none;
+    }
+}
+
+/* --- Blog section --- */
+.l-blog-section {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    padding: 168px;
+
+    &__introduction {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__blog-posts {
+        margin-top: 65px;
+    }
+}
+
+.blog-posts {
+    display: flex;
+
+    &__item {
+        margin-right: 24px;
+    }
+}
+
+.blog-post-preview {
+    display: flex;
+    flex-flow: column;
+
+    &__date {
+        color: #72908b;
+        font-family: "Work Sans", sans-serif;
+        font-size: 1.125rem;
+        padding: 20px 20px 0 20px;
+    }
+
+    &__title {
+        color: #053634;
+        font-family: "Playfair Display", serif;
+        font-size: 1.75rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        line-height: 145%;
+        margin: 0;
+        padding: 10px 20px 20px 20px;
+        text-transform: capitalize;
     }
 }
 
