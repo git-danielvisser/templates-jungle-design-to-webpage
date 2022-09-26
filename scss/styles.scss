@@ -10,11 +10,14 @@
     color: #053634;
     font-family: "Playfair Display", serif;
     font-size: 4.125rem;
-    letter-spacing: 0.02em;
     line-height: 126%;
     margin: 0;
     padding: 0;
     text-transform: capitalize;
+
+    &.--letters-spaced {
+        letter-spacing: 0.02em;
+    }
 }
 
 .h2 {
@@ -64,10 +67,10 @@
 
 .h5 {
     color: #053634;
-    font-size: 1.5rem;
-    text-transform: capitalize;
     font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
     font-weight: 400;
+    text-transform: capitalize;
 }
 
 .h6 {
@@ -85,6 +88,14 @@ p {
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 220%;
+}
+
+a {
+    color: #053634;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 /* --- General --- */
@@ -661,6 +672,21 @@ p {
         color: #053634;
         margin: 0;
         padding: 10px 20px 20px 20px;
+    }
+}
+
+/* --- Contact section --- */
+.l-contact-section {
+    align-items: center;
+    display: flex;
+    padding: 150px 326px;
+
+    &__message-body {
+        max-width: 670px;
+    }
+
+    &__contact-button {
+        margin-left: auto;
     }
 }
 
