@@ -6,8 +6,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 /* --- Typography --- */
-h1 {
+.h1 {
     color: #053634;
+    font-family: "Playfair Display", serif;
+    font-size: 4.125rem;
+    letter-spacing: 0.02em;
+    line-height: 126%;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.h2 {
+    color: #053634;
+    font-family: "Playfair Display", serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -31,7 +43,17 @@ h1 {
     }
 }
 
-h2 {
+.h3 {
+    color: #053634;
+    font-family: "Playfair Display", serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 145%;
+    text-transform: capitalize;
+}
+
+.h4 {
     color: #053634;
     font-family: "Work Sans", sans-serif;
     font-size: 1.625rem;
@@ -40,7 +62,15 @@ h2 {
     text-transform: capitalize;
 }
 
-h4 {
+.h5 {
+    color: #053634;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+}
+
+.h6 {
     color: #72908b;
     font-family: "Work Sans", sans-serif;
     font-size: 1.125rem;
@@ -287,27 +317,6 @@ p {
         width: 727px;
     }
 
-    &__title {
-        color: #053634;
-        font-family: "Playfair Display", serif;
-        font-size: 4.125rem;
-        letter-spacing: 0.02em;
-        line-height: 126%;
-        margin: 0;
-        padding: 0;
-        text-transform: capitalize;
-    }
-
-    &__body {
-        color: #053634;
-        font-family: "Work Sans", sans-serif;
-        font-size: 1.125rem;
-        font-weight: 300;
-        line-height: 220%;
-        margin: 22px 0 0;
-        padding: 0;
-    }
-
     &__call-to-action {
         margin-top: 68px;
     }
@@ -453,13 +462,8 @@ p {
 
 .project-preview {
     &__caption {
-        color: #053634;
-        font-size: 1.75rem;
-        letter-spacing: 0.02em;
-        line-height: 126%;
         margin-left: 20px;
         margin-top: 12px;
-        text-transform: capitalize;
     }
 }
 
@@ -655,14 +659,8 @@ p {
 
     &__title {
         color: #053634;
-        font-family: "Playfair Display", serif;
-        font-size: 1.75rem;
-        font-weight: 400;
-        letter-spacing: 0.02em;
-        line-height: 145%;
         margin: 0;
         padding: 10px 20px 20px 20px;
-        text-transform: capitalize;
     }
 }
 
