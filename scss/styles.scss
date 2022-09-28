@@ -4,8 +4,13 @@
 
 /* --- Fonts --- */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@import "icons";
 
 /* --- Typography --- */
+html {
+    font-size: 100%;
+}
+
 .h1 {
     color: #053634;
     font-family: "Playfair Display", serif;
@@ -82,7 +87,8 @@
     text-transform: uppercase;
 }
 
-p {
+p,
+span {
     color: #053634;
     font-family: "Work Sans", sans-serif;
     font-size: 1.125rem;
@@ -96,6 +102,10 @@ a {
     font-size: 1.125rem;
     font-weight: 500;
     text-decoration: none;
+
+    &.--thin {
+        font-weight: 300;
+    }
 }
 
 /* --- General --- */
@@ -216,6 +226,46 @@ a {
         position: absolute;
         right: 0;
         top: 9.4%;
+    }
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+
+    &__item {
+        color: #053634;
+        font-family: "Work Sans", sans-serif;
+        font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 220%;
+        text-transform: capitalize;
+    }
+
+    &.--with-dashes {
+        .list__item {
+            &::before {
+                color: #dddfd5;
+                content: "- ";
+            }
+        }
+    }
+
+    &.--extra-space-between {
+        .list__item {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.social-icons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    &__item {
+        margin-left: 34px;
+        font-size: 0.75rem;
     }
 }
 
@@ -686,6 +736,41 @@ a {
     }
 
     &__contact-button {
+        margin-left: auto;
+    }
+}
+
+/* --- Footer --- */
+.l-footer-block {
+    display: flex;
+    padding: 155px 168px 80px;
+
+    &__company-statement {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+        max-width: 402px;
+    }
+
+    &__quick-links {
+        margin-left: 250px;
+    }
+
+    &__services {
+        margin-left: 134px;
+    }
+
+    &__company-info {
+        margin-left: 94px;
+    }
+}
+
+.l-footer-bar {
+    padding: 50px 168px;
+    display: flex;
+    border-top: 1px solid #e5e7dd;
+
+    &__social-media {
         margin-left: auto;
     }
 }
