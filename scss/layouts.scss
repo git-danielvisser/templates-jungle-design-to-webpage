@@ -1,0 +1,163 @@
+.l-header {
+    box-sizing: border-box;
+    display: flex;
+    padding: 0px 168px;
+
+    &__branding {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__menu {
+        margin-left: auto;
+    }
+
+    &__search {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 42px;
+    }
+
+    &__side-menu {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 16px;
+    }
+}
+
+.l-about-section {
+    box-sizing: border-box;
+    display: flex;
+    padding: 168px;
+    width: 100%;
+
+    &__image-pair {
+        flex: 1 0 691px;
+    }
+
+    &__article {
+        align-items: center;
+        display: flex;
+        height: 829px;
+        margin-left: 128px;
+    }
+}
+
+.l-services-section {
+    box-sizing: border-box;
+    display: flex;
+    padding: 168px;
+    width: 100%;
+
+    &__article {
+        width: 594px;
+    }
+
+    &__slideshow {
+        margin-left: 75px;
+        width: 914px;
+    }
+}
+
+.l-portfolio-section {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    padding: 168px;
+
+    &__introduction {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__projects {
+        margin-top: 75px;
+    }
+}
+
+.l-testimonials-section {
+    padding: 168px;
+
+    &__testimonials {
+        margin-top: 75px;
+    }
+}
+
+.l-newsletter-section {
+    align-items: center;
+    display: flex;
+    padding: 168px;
+
+    &__sign-up {
+        margin-left: 146px;
+    }
+}
+
+.l-blog-section {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    padding: 168px;
+
+    &__introduction {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__blog-posts {
+        margin-top: 65px;
+    }
+}
+
+.l-contact-section {
+    align-items: center;
+    display: flex;
+    padding: 150px 326px;
+
+    &__message-body {
+        max-width: 670px;
+    }
+
+    &__contact-button {
+        margin-left: auto;
+    }
+}
+
+.l-footer-block {
+    display: flex;
+    padding: 155px 168px 80px;
+
+    &__company-statement {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+        max-width: 402px;
+    }
+
+    &__quick-links {
+        margin-left: 250px;
+    }
+
+    &__services {
+        margin-left: 134px;
+    }
+
+    &__company-info {
+        margin-left: 94px;
+    }
+}
+
+.l-footer-bar {
+    padding: 50px 168px;
+    display: flex;
+    border-top: 1px solid #e5e7dd;
+
+    &__social-media {
+        margin-left: auto;
+    }
+}
