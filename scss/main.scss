@@ -3,16 +3,16 @@
 @include normalize();
 
 /* --- Typography --- */
-@import "typography";
+@import "_typography";
 
 /* --- Icons --- */
-@import "icons";
+@import "_icons";
 
 /* --- Components --- */
-@import "components";
+@import "_components";
 
 /* --- Layouts --- */
-@import "layouts";
+@import "_layouts";
 
 /* --- Helpers --- */
-@import "helpers";
+@import "_helpers";
