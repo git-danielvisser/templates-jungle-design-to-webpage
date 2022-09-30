@@ -1,3 +1,5 @@
+@import "_breakpoints";
+
 .button {
     background-color: transparent;
     border: solid 1px #a4b7b1;
@@ -157,8 +159,8 @@
     padding: 0;
 
     &__item {
-        margin-left: 34px;
         font-size: 0.75rem;
+        margin-left: 34px;
     }
 }
 
@@ -283,16 +285,53 @@
 
 .hero {
     display: flex;
+    flex-flow: column;
     width: 100%;
+
+    @include lg {
+        flex-flow: row;
+    }
 
     &__message {
         background: #f0f1ea;
-        padding: 184px 110px 0 168px;
-        width: 727px;
+        box-sizing: border-box;
+        padding: 34px;
+
+        @include lg {
+            max-width: 50%;
+            padding: 68px;
+        }
+
+        @include xl {
+            max-width: 727px;
+            padding: 184px 110px 184px 168px;
+        }
     }
 
     &__call-to-action {
         margin-top: 68px;
+    }
+
+    &__image-wrapper {
+        order: -1;
+
+        @include lg {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            order: 2;
+            overflow: hidden;
+        }
+    }
+
+    &__image {
+        height: auto;
+        width: 100%;
+
+        @include lg {
+            height: 100%;
+            width: auto;
+        }
     }
 }
 
