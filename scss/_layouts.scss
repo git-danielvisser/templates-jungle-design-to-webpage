@@ -1,7 +1,17 @@
+@import "_breakpoints";
+
 .l-header {
     box-sizing: border-box;
     display: flex;
-    padding: 0px 168px;
+    padding: 30px 34px;
+
+    @include lg {
+        padding: 0px 34px;
+    }
+
+    @include xl {
+        padding: 0px 168px;
+    }
 
     &__branding {
         align-items: center;
@@ -10,14 +20,23 @@
     }
 
     &__menu {
+        display: none;
         margin-left: auto;
+
+        @include lg {
+            display: block;
+        }
     }
 
     &__search {
         align-items: center;
         display: flex;
         justify-content: center;
-        margin-left: 42px;
+        margin-left: auto;
+
+        @include lg {
+            margin-left: 42px;
+        }
     }
 
     &__side-menu {
@@ -153,9 +172,9 @@
 }
 
 .l-footer-bar {
-    padding: 50px 168px;
-    display: flex;
     border-top: 1px solid #e5e7dd;
+    display: flex;
+    padding: 50px 168px;
 
     &__social-media {
         margin-left: auto;
