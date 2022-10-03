@@ -52,6 +52,7 @@
     box-sizing: border-box;
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
     padding: 60px 34px;
     width: 100%;
 
@@ -66,7 +67,7 @@
 
     &__image-pair {
         @include lg {
-            flex: 1 0;
+            width: 43.62%;
         }
     }
 
@@ -76,9 +77,8 @@
         margin-top: 20px;
 
         @include lg {
-            flex: 1 0;
-            margin-left: 128px;
             margin-top: none;
+            width: 47.03%;
         }
     }
 }
