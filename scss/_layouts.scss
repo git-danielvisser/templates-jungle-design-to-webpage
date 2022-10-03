@@ -84,18 +84,35 @@
 }
 
 .l-services-section {
+    align-items: center;
     box-sizing: border-box;
     display: flex;
-    padding: 168px;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 60px 34px;
     width: 100%;
 
+    @include lg {
+        flex-flow: row;
+        padding: 68px;
+    }
+
+    @include xl {
+        padding: 168px;
+    }
+
     &__article {
-        width: 594px;
+        @include lg {
+            width: 37.5%;
+        }
     }
 
     &__slideshow {
-        margin-left: 75px;
-        width: 914px;
+        margin-top: 50px;
+
+        @include lg {
+            width: 57.7%;
+        }
     }
 }
 
