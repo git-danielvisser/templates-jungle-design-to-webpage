@@ -48,20 +48,38 @@
 }
 
 .l-about-section {
+    align-items: center;
     box-sizing: border-box;
     display: flex;
-    padding: 168px;
+    flex-flow: column;
+    padding: 60px 34px;
     width: 100%;
 
+    @include lg {
+        flex-flow: row;
+        padding: 68px;
+    }
+
+    @include xl {
+        padding: 168px;
+    }
+
     &__image-pair {
-        flex: 1 0 691px;
+        @include lg {
+            flex: 1 0;
+        }
     }
 
     &__article {
         align-items: center;
         display: flex;
-        height: 829px;
-        margin-left: 128px;
+        margin-top: 20px;
+
+        @include lg {
+            flex: 1 0;
+            margin-left: 128px;
+            margin-top: none;
+        }
     }
 }
 
