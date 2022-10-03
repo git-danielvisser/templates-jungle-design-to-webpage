@@ -51,20 +51,24 @@
     height: 100%;
     position: relative;
     width: 100%;
+    max-width: 691px;
 
     &__small {
         border: solid 14px #f8f6f1;
         border-left: none;
         border-top: none;
+        height: auto;
         max-width: 44%;
         position: absolute;
+        width: 100%;
         z-index: 1;
     }
     &__big {
+        height: auto;
+        margin-left: 21.5%;
+        margin-top: 11.2%;
         max-width: 78.4%;
-        position: absolute;
-        right: 0;
-        top: 9.4%;
+        width: 100%;
     }
 }
 
