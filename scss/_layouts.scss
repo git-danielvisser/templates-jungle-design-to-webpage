@@ -165,10 +165,35 @@
 .l-newsletter-section {
     align-items: center;
     display: flex;
-    padding: 168px;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 60px 34px;
+
+    @include lg {
+        flex-flow: row;
+        padding: 68px;
+    }
+
+    @include xl {
+        padding: 168px;
+    }
+
+    &__image {
+        margin-top: 60px;
+
+        @include lg {
+            margin-top: none;
+            width: 42.297%;
+        }
+    }
 
     &__sign-up {
-        margin-left: 146px;
+        order: -1;
+
+        @include lg {
+            order: 2;
+            width: 48.484%;
+        }
     }
 }
 
