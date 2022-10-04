@@ -585,26 +585,51 @@
 
 .blog-posts {
     display: flex;
+    flex-flow: column;
+
+    @include lg {
+        flex-flow: row;
+        justify-content: space-between;
+    }
 
     &__item {
-        margin-right: 24px;
+        margin-top: 20px;
+
+        @include lg {
+            width: 32.323%;
+            margin-top: none;
+        }
     }
 }
 
 .blog-post-preview {
     display: flex;
     flex-flow: column;
+    width: 100%;
+
+    &__image {
+        height: auto;
+        width: 100%;
+    }
 
     &__date {
         color: #72908b;
         font-family: "Work Sans", sans-serif;
         font-size: 1.125rem;
-        padding: 20px 20px 0 20px;
+        padding: 20px 0 0;
+
+        @include lg {
+            padding: 20px 20px 0 20px;
+        }
     }
 
     &__title {
         color: #053634;
         margin: 0;
-        padding: 10px 20px 20px 20px;
+        padding: 10px 0 20px;
+
+        @include lg {
+            padding: 10px 20px 20px 20px;
+        }
     }
 }
