@@ -120,12 +120,21 @@
     align-items: center;
     display: flex;
     flex-flow: column;
-    padding: 168px;
+    padding: 60px 34px;
+
+    @include lg {
+        padding: 68px;
+    }
+
+    @include xl {
+        padding: 168px;
+    }
 
     &__introduction {
         align-items: center;
         display: flex;
         flex-flow: column;
+        text-align: center;
     }
 
     &__projects {
