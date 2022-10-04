@@ -72,23 +72,29 @@
 }
 
 .decorated-image {
-    display: inline-block;
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 5.322%;
+    padding-left: 5.873%;
     position: relative;
+    width: 100%;
 
     &__image {
+        height: auto;
         position: relative;
+        width: 100%;
         z-index: 1;
     }
 
     &::before {
         border: 14px solid #f0f1ea;
+        bottom: 0;
         box-sizing: border-box;
         content: "";
-        height: 100%;
-        left: -40px;
-        margin-top: 47px;
+        height: 94.678%;
+        left: 0;
         position: absolute;
-        width: 100%;
+        width: 94.127%;
         z-index: 0;
     }
 }
