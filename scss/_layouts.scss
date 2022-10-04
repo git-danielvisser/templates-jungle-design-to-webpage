@@ -229,14 +229,43 @@
 .l-contact-section {
     align-items: center;
     display: flex;
-    padding: 150px 326px;
+    flex-flow: column;
+    padding: 60px 34px;
+    justify-content: center;
+
+    @include lg {
+        padding: 68px;
+        flex-flow: row;
+    }
+
+    @include xl {
+        padding: 150px 326px;
+    }
+
+    &__message-headline {
+        text-align: center;
+
+        @include lg {
+            text-align: left;
+        }
+    }
 
     &__message-body {
         max-width: 670px;
+        text-align: center;
+
+        @include lg {
+            text-align: left;
+        }
     }
 
     &__contact-me {
-        margin-left: auto;
+        margin-top: 20px;
+
+        @include lg {
+            margin-top: none;
+            margin-left: auto;
+        }
     }
 }
 
