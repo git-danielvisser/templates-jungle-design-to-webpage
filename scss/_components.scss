@@ -459,9 +459,9 @@
 
 .project-preview {
     &__image {
-        width: 100%;
         height: auto;
         max-width: 480px;
+        width: 100%;
     }
 
     &__caption {
@@ -473,13 +473,27 @@
 .testimonials {
     display: flex;
     flex-flow: column;
+    overflow: hidden;
+    width: 100%;
 
     &__row {
         display: flex;
     }
 
     &__item {
-        margin-right: 42px;
+        display: flex;
+        flex: 1 0 100%;
+
+        @include lg {
+            flex: 1 0 48.674%;
+            grid-template-columns: auto auto;
+            margin-right: 2.651%;
+        }
+
+        @include xl {
+            flex: 1 0 31.565%;
+            margin-right: 2.651%;
+        }
     }
 
     &__navigation {
@@ -505,15 +519,23 @@
     background-color: #f8f6f1;
     border: 1px solid #ebe8e0;
     box-sizing: border-box;
-    padding: 58px;
-    width: 500px;
+    padding: 28px;
+    width: 100%;
+
+    @include lg {
+        padding: 58px;
+    }
 
     &__message {
         color: #053634;
         font-family: "Work Sans", sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.125rem;
         font-weight: 300;
         line-height: 190%;
+
+        @include lg {
+            font-size: 1.5rem;
+        }
     }
 
     &__author {
@@ -532,7 +554,11 @@
             display: block;
             height: 1px;
             margin-right: 25px;
-            width: 70px;
+            width: 25px;
+
+            @include lg {
+                width: 70px;
+            }
         }
     }
 
@@ -541,9 +567,13 @@
         font-family: "Work Sans", sans-serif;
         font-size: 1rem;
         line-height: 145%;
-        margin-left: 95px;
+        margin-left: 50px;
         margin-top: 10px;
         text-transform: capitalize;
+
+        @include lg {
+            margin-left: 95px;
+        }
     }
 }
 
