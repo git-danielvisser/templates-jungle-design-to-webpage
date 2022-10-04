@@ -143,10 +143,22 @@
 }
 
 .l-testimonials-section {
-    padding: 168px;
+    padding: 60px 34px;
+
+    @include lg {
+        padding: 68px;
+    }
+
+    @include xl {
+        padding: 168px;
+    }
 
     &__testimonials {
-        margin-top: 75px;
+        margin-top: 45px;
+
+        @include lg {
+            margin-top: 75px;
+        }
     }
 }
 
