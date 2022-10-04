@@ -201,7 +201,15 @@
     align-items: center;
     display: flex;
     flex-flow: column;
-    padding: 168px;
+    padding: 60px 34px;
+
+    @include lg {
+        padding: 68px;
+    }
+
+    @include xl {
+        padding: 168px;
+    }
 
     &__introduction {
         align-items: center;
@@ -210,7 +218,11 @@
     }
 
     &__blog-posts {
-        margin-top: 65px;
+        margin-top: 35px;
+
+        @include xl {
+            margin-top: 65px;
+        }
     }
 }
 
