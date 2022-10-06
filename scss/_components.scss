@@ -455,11 +455,12 @@
 .projects {
     &__grid {
         display: grid;
-
         padding-top: 20px;
+        gap: 40px;
 
         @include lg {
             grid-template-columns: auto auto;
+            gap: 72px;
         }
 
         @include xl {
@@ -477,15 +478,21 @@
 }
 
 .project-preview {
+    &__figure {
+        margin: 0;
+    }
+
     &__image {
         height: auto;
-        max-width: 480px;
         width: 100%;
     }
 
     &__caption {
-        margin-left: 20px;
         margin-top: 12px;
+
+        @include lg {
+            margin-left: 20px;
+        }
     }
 }
 
