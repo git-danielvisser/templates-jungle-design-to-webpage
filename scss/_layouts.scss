@@ -230,12 +230,12 @@
     align-items: center;
     display: flex;
     flex-flow: column;
-    padding: 60px 34px;
     justify-content: center;
+    padding: 60px 34px;
 
     @include lg {
-        padding: 68px;
         flex-flow: row;
+        padding: 68px;
     }
 
     @include xl {
@@ -263,42 +263,119 @@
         margin-top: 20px;
 
         @include lg {
-            margin-top: none;
             margin-left: auto;
+            margin-top: none;
         }
     }
 }
 
 .l-footer-block {
-    display: flex;
-    padding: 155px 168px 80px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "company-statement"
+        "quick-links"
+        "services"
+        "company-info";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    justify-content: center;
+    padding: 60px 34px 30px;
+
+    @include md {
+        display: grid;
+        grid-template-areas:
+            "company-statement quick-links"
+            "company-info  services";
+        grid-template-columns: 40% 35%;
+        justify-content: space-between;
+    }
+
+    @include lg {
+        display: grid;
+        grid-template-areas:
+            "company-statement . ."
+            "quick-links services company-info";
+        grid-template-columns: 33.333% 33.333% 33.333%;
+        padding: 68px;
+    }
+
+    @include xl {
+        grid-template-areas: "company-statement . quick-links . services . company-info";
+        grid-template-columns: 22.853% 15.719% auto 8.459% auto 5.934% auto;
+        padding: 155px 168px 80px;
+    }
 
     &__company-statement {
-        align-items: flex-start;
-        display: flex;
-        flex-flow: column;
-        max-width: 402px;
+        grid-area: company-statement;
+        text-align: center;
+
+        @include md {
+            align-items: flex-start;
+            display: flex;
+            flex-flow: column;
+
+            text-align: left;
+        }
     }
 
     &__quick-links {
-        margin-left: 250px;
+        grid-area: quick-links;
+        text-align: center;
+
+        @include md {
+            text-align: left;
+        }
     }
 
     &__services {
-        margin-left: 134px;
+        grid-area: services;
+        text-align: center;
+
+        @include md {
+            text-align: left;
+        }
     }
 
     &__company-info {
-        margin-left: 94px;
+        grid-area: company-info;
+        text-align: center;
+
+        @include md {
+            text-align: left;
+        }
     }
 }
 
 .l-footer-bar {
     border-top: 1px solid #e5e7dd;
     display: flex;
-    padding: 50px 168px;
+    flex-flow: column;
+    padding: 30px 34px;
+
+    @include lg {
+        flex-flow: row;
+        padding: 68px;
+    }
+
+    @include xl {
+        padding: 50px 168px;
+    }
+
+    &__copyright {
+        margin-top: 20px;
+        text-align: center;
+    }
 
     &__social-media {
-        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        order: -1;
+
+        @include lg {
+            display: block;
+            margin-left: auto;
+            order: 2;
+        }
     }
 }
