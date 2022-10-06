@@ -148,9 +148,18 @@
 
     &.--with-dashes {
         .list__item {
+            padding-left: 18px;
+            position: relative;
+
             &::before {
-                color: #dddfd5;
-                content: "- ";
+                background-color: #dddfd5;
+                content: "";
+                display: inline-block;
+                height: 1px;
+                margin-bottom: 0.281em;
+                margin-left: -18px;
+                margin-right: 8px;
+                width: 10px;
             }
         }
     }
@@ -596,8 +605,8 @@
         margin-top: 20px;
 
         @include lg {
-            width: 32.323%;
             margin-top: none;
+            width: 32.323%;
         }
     }
 }
