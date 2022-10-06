@@ -328,7 +328,11 @@
     }
 
     &__call-to-action {
-        margin-top: 68px;
+        margin: 34px 0;
+
+        @include lg {
+            margin-top: 68px;
+        }
     }
 
     &__image-wrapper {
