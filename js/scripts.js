@@ -1,16 +1,4 @@
-const SCREEN_SM = 576;  // Small tablets and large smartphones (landscape view)
-const SCREEN_MD = 768;  // Small tablets (portrait view)
-const SCREEN_LG = 992;  // Tablets and small desktops
-const SCREEN_XL = 1600; // Large tablets and desktops
-
-
-function getScreenSizeType() {
-    const width = screen.width;
-    if (width > SCREEN_XL) return 'XL';
-    if (width > SCREEN_LG) return 'LG';
-    if (width > SCREEN_MD) return 'MD';
-    return 'SM';
-}
+import {Testimonials} from "./testimonials.js";
 
 function initSlideshow(slideshowEle, delay) {
     const slideEles = slideshowEle.querySelectorAll('.slideshow__slide');
@@ -40,6 +28,10 @@ function initSlideshow(slideshowEle, delay) {
     }, delay);
 }
 
-
 const slideshowEle = document.querySelector('.slideshow');
 initSlideshow(slideshowEle, 3000);
+
+const testimonialsEle = document.querySelector('.testimonials');
+
+const testimonials = new Testimonials(testimonialsEle);
+testimonials.start();
