@@ -1,29 +1,48 @@
-function Slideshow(slideshowEle, delay) {
-    const slideEles = slideshowEle.querySelectorAll('.slideshow__slide');
-    const captionlEles = slideshowEle.querySelectorAll('.numbered-captions__item')
-    const slidesAmount = slideEles.length;
+const SLIDE_CLASS = 'slideshow__slide';
+const CAPTION_ITEM_CLASS = 'numbered-captions__item';
+const CURRENT_MODIFIER_CLASS = '--current';
 
-    let currentPosition = 0;
-    slideEles[currentPosition].classList.add('--current');
-    captionlEles[currentPosition].classList.add('--current');
-    
-    setInterval(()=> {
-        const previousPosition = currentPosition;
+class Slideshow {
 
-        if (currentPosition < slidesAmount - 1) {
-            // Increment to the next slide
-            currentPosition++;
-        } else {
-            // Reached the end, reset
-            currentPosition = 0;
-        }
+    constructor(element) {
+        this.element = element;
+        this.currentSlide = 0;
 
-        slideEles[previousPosition].classList.remove('--current');
-        slideEles[currentPosition].classList.add('--current');
+        const slideEles = this.element.querySelectorAll(`.${SLIDE_CLASS}`);
+        const captionlEles = this.element.querySelectorAll(`.${CAPTION_ITEM_CLASS}`)
+        slideEles[this.currentSlide].classList.add(CURRENT_MODIFIER_CLASS);
+        captionlEles[this.currentSlide].classList.add(CURRENT_MODIFIER_CLASS);
 
-        captionlEles[previousPosition].classList.remove('--current');
-        captionlEles[currentPosition].classList.add('--current');
-    }, delay);
+        this.slidesAmount = slideEles.length;
+    }
+
+    start() {
+        this.timerId = setInterval(()=> {
+            let nextSlide = this.currentSlide + 1;
+            nextSlide = (nextSlide < this.slidesAmount) ? nextSlide : 0;
+            this.moveToSlide(nextSlide);
+        }, 4000)
+    }
+
+    stop() {
+        clearInterval(this.timerId);
+    }
+
+    moveToSlide(i) { 
+        const previousSlide = this.currentSlide;
+        this.currentSlide = i;
+        if (this.currentSlide === previousSlide) return;
+
+        const slideEles = this.element.querySelectorAll(`.${SLIDE_CLASS}`);
+        const captionlEles = this.element.querySelectorAll(`.${CAPTION_ITEM_CLASS}`)
+
+        slideEles[previousSlide].classList.remove(CURRENT_MODIFIER_CLASS);
+        slideEles[this.currentSlide].classList.add(CURRENT_MODIFIER_CLASS);
+
+        captionlEles[previousSlide].classList.remove(CURRENT_MODIFIER_CLASS);
+        captionlEles[this.currentSlide].classList.add(CURRENT_MODIFIER_CLASS);
+    }
+
 }
 
-export {Slideshow}
+export {Slideshow};
