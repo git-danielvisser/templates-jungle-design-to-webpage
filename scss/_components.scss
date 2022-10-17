@@ -522,16 +522,15 @@
     &__item {
         display: flex;
         flex: 1 0 100%;
+        margin-right: 2.651%;
 
         @include lg {
             flex: 1 0 48.674%;
             grid-template-columns: auto auto;
-            margin-right: 2.651%;
         }
 
         @include xl {
             flex: 1 0 31.565%;
-            margin-right: 2.651%;
         }
     }
 
@@ -542,14 +541,29 @@
     }
 
     &__dot {
-        background-color: #d7dac6;
         border-radius: 50%;
-        height: 10px;
-        margin: 0 14px;
-        width: 10px;
+        cursor: pointer;
+        height: 32px;
+        margin: 0 2px;
+        position: relative;
+        width: 32px;
+
+        &::after {
+            background-color: #d7dac6;
+            border-radius: 50%;
+            content: "";
+            height: 10px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+        }
 
         &.--current {
-            background-color: #053634;
+            &::after {
+                background-color: #053634;
+            }
         }
     }
 }
