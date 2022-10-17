@@ -517,6 +517,7 @@
 
     &__row {
         display: flex;
+        transition: 0.9s ease-in-out;
     }
 
     &__item {
