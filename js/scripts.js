@@ -1,5 +1,12 @@
-import {Slideshow} from './slideshow.js';
-import {Testimonials} from './testimonials.js';
+import { Brands } from './brands.js';
+import { Slideshow } from './slideshow.js';
+import { Testimonials } from './testimonials.js';
+
+
+const brandsEle = document.querySelector('.brands');
+const brands = new Brands(brandsEle);
+brands.start();
+
 
 const slideshowEle = document.querySelector('.slideshow');
 const slideshow = new Slideshow(slideshowEle);
