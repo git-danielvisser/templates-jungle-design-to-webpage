@@ -358,19 +358,54 @@
 
 .brands {
     border-bottom: 1px solid #e5e7dd;
-    height: 227px;
+    display: flex;
+    justify-content: left;
+
+    @include xl {
+        justify-content: center;
+    }
+
+    &__inner {
+        @include xl {
+            overflow: hidden;
+            width: 83.333%;
+        }
+    }
 
     &__list {
         align-items: center;
         display: flex;
         height: 100%;
-        justify-content: center;
         list-style: none;
-        margin-left: -168px;
+        margin: 0;
+        padding: 0;
+        transition: transform 1s ease-in-out;
     }
 
     &__item {
-        margin-left: 168px;
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        height: 227px;
+        justify-content: center;
+        width: 100vw;
+
+        @include md {
+            width: 50vw;
+        }
+
+        @include lg {
+            width: 33.333vw;
+        }
+
+        @include xl {
+            flex: 0 0 320px;
+        }
+    }
+
+    &__logo {
+        height: auto;
+        max-width: 100%;
     }
 }
 
