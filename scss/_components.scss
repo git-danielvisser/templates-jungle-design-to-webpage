@@ -186,9 +186,47 @@
     overflow: hidden;
     position: relative;
     width: 100%;
+    z-index: -2;
 
     &.--alt-color {
         background-color: #f0f1ea;
+    }
+
+    &.--double-dot-pattern {
+        &::before {
+            background-image: url(/res/images/dots.png), url(/res/images/dots.png);
+            background-position: left 1.197% top 18.73%, right 1.197% bottom 15.033%;
+            background-repeat: no-repeat, no-repeat;
+            bottom: 0px;
+            content: "";
+            left: 0px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+    }
+
+    &.--bottom-right-dot-pattern {
+        &::before {
+            bottom: 0;
+            content: url(/res/images/dots.png);
+            position: absolute;
+            right: -85px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+    }
+
+    &.--left-dot-pattern {
+        &::before {
+            content: url(/res/images/dots-darker.png);
+            left: 5.156%;
+            position: absolute;
+            top: 12.133%;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
     }
 
     $triangle_height: 54px;
