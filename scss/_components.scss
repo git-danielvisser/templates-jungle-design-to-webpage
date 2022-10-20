@@ -1,5 +1,19 @@
 @import "_breakpoints";
 
+@keyframes button-icon-hint {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .button {
     align-items: center;
     background-color: transparent;
@@ -16,15 +30,30 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    transition: all 0.3s ease-in-out;
+
     &__icon {
         font-size: 0.815rem;
         margin-left: 10px;
+    }
+
+    &:hover {
+        background-color: #053634;
+        color: #fff;
+
+        .button__icon {
+            animation: button-icon-hint 0.5s ease-in-out 0.5s 2;
+        }
     }
 
     &.--primary {
         background-color: #053634;
         border: none;
         color: #f8f6f1;
+
+        &:hover {
+            background-color: #ebb017;
+        }
     }
 
     &.--big {
