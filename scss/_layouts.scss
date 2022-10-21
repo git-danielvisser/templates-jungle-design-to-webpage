@@ -3,6 +3,7 @@
 .l-header {
     box-sizing: border-box;
     display: flex;
+    justify-content: right;
     padding: 30px 34px;
 
     @include lg {
@@ -17,14 +18,15 @@
         align-items: center;
         display: flex;
         justify-content: center;
+        margin-right: auto;
     }
 
     &__menu {
         display: none;
-        margin-left: auto;
 
         @include lg {
             display: block;
+            margin-right: 42px;
         }
     }
 
@@ -32,10 +34,10 @@
         align-items: center;
         display: flex;
         justify-content: center;
-        margin-left: auto;
+        margin-top: 5px;
 
         @include lg {
-            margin-left: 42px;
+            margin-right: 16px;
         }
     }
 
@@ -43,7 +45,8 @@
         align-items: center;
         display: flex;
         justify-content: center;
-        margin-left: 16px;
+        margin-right: -8px;
+        margin-top: 5px;
     }
 }
 
