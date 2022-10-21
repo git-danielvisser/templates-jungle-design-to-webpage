@@ -9,11 +9,13 @@ class Slideshow {
         this.currentSlide = 0;
 
         const slideEles = this.element.querySelectorAll(`.${SLIDE_CLASS}`);
-        const captionlEles = this.element.querySelectorAll(`.${CAPTION_ITEM_CLASS}`)
+        const captionlEles = this.element.querySelectorAll(`.${CAPTION_ITEM_CLASS}`);
         slideEles[this.currentSlide].classList.add(CURRENT_MODIFIER_CLASS);
         captionlEles[this.currentSlide].classList.add(CURRENT_MODIFIER_CLASS);
 
         this.slidesAmount = slideEles.length;
+
+        this._buildNavigation();
     }
 
     start() {
@@ -41,6 +43,19 @@ class Slideshow {
 
         captionlEles[previousSlide].classList.remove(CURRENT_MODIFIER_CLASS);
         captionlEles[this.currentSlide].classList.add(CURRENT_MODIFIER_CLASS);
+    }
+
+    _buildNavigation(){
+        const captionlEles = this.element.querySelectorAll(`.${CAPTION_ITEM_CLASS}`);
+        captionlEles.forEach((element, i) => 
+            element.addEventListener('click', () => this._onNavigationCaptionClick(i))
+        );
+    }
+
+    _onNavigationCaptionClick(i) {
+        this.stop();
+        this.moveToSlide(i);
+        this.start();
     }
 
 }
