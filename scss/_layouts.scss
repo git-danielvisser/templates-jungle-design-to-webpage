@@ -35,10 +35,7 @@
         display: flex;
         justify-content: center;
         margin-top: 5px;
-
-        @include lg {
-            margin-right: 16px;
-        }
+        margin-right: 16px;
     }
 
     &__side-menu {
