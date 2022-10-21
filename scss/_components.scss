@@ -393,21 +393,23 @@
         padding: 34px;
 
         @include lg {
+            align-self: center;
             max-width: 50%;
             padding: 68px;
         }
 
         @include xl {
+            align-self: flex-start;
             padding: 182px 110px 170px 166px;
             width: 37.864%;
         }
     }
 
     &__call-to-action {
-        margin: 34px 0;
+        margin: 56px 0 60px 0;
 
         @include lg {
-            margin-top: 56px;
+            margin: 56px 0 34px 0;
         }
     }
 
