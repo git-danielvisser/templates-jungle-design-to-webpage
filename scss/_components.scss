@@ -258,7 +258,7 @@
         }
     }
 
-    $triangle_height: 54px;
+    $triangle_height: 73px;
     &.--top-right-triangle,
     &.--bottom-left-triangle,
     &.--bottom-right-triangle {
@@ -399,7 +399,7 @@
         }
 
         @include xl {
-            padding: 184px 110px 184px 168px;
+            padding: 182px 110px 170px 166px;
             width: 37.864%;
         }
     }
@@ -408,7 +408,7 @@
         margin: 34px 0;
 
         @include lg {
-            margin-top: 68px;
+            margin-top: 56px;
         }
     }
 
