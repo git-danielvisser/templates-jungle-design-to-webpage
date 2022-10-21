@@ -44,17 +44,17 @@ html {
             border-radius: 50%;
             content: "";
             height: $circle-diameter;
-            left: -$circle-diameter/2.5;
+            left: -$circle-diameter/2.35;
             position: absolute;
-            top: -$circle-diameter/5.2;
+            top: -$circle-diameter/6;
             transform: translateZ(-1px);
             width: $circle-diameter;
 
             @include lg {
                 $circle-diameter: 5.25rem;
                 height: $circle-diameter;
-                left: -$circle-diameter/2.5;
-                top: -$circle-diameter/5.2;
+                left: -$circle-diameter/2.35;
+                top: -$circle-diameter/6;
                 width: $circle-diameter;
             }
         }
