@@ -52,7 +52,7 @@
     box-sizing: border-box;
     display: flex;
     flex-flow: column;
-    padding: 80px 34px;
+    padding: 40px 34px 100px;
     width: 100%;
 
     @include lg {
@@ -87,15 +87,15 @@
 }
 
 .l-services-section {
-    align-items: center;
     box-sizing: border-box;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    padding: 60px 34px;
+    padding: 40px 34px 100px;
     width: 100%;
 
     @include lg {
+        align-items: center;
         flex-flow: row;
         padding: 68px;
     }
@@ -114,9 +114,10 @@
     }
 
     &__slideshow {
-        margin-top: 30px;
+        margin-top: 60px;
 
         @include lg {
+            margin-top: 30px;
             width: 57.7%;
         }
     }
