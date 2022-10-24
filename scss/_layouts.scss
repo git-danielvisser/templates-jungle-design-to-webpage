@@ -34,8 +34,8 @@
         align-items: center;
         display: flex;
         justify-content: center;
-        margin-top: 5px;
         margin-right: 16px;
+        margin-top: 5px;
     }
 
     &__side-menu {
@@ -68,8 +68,8 @@
         margin-top: 25px;
 
         @include lg {
-            width: 43.42%;
             margin-top: 7px;
+            width: 43.42%;
         }
     }
 
@@ -79,9 +79,9 @@
         margin-top: 100px;
 
         @include lg {
+            margin-left: 123px;
             margin-top: 50px;
             width: 47.03%;
-            margin-left: 123px;
         }
     }
 }
@@ -105,13 +105,16 @@
     }
 
     &__article {
+        align-self: flex-start;
+        margin-top: 26px;
+
         @include lg {
             width: 37.5%;
         }
     }
 
     &__slideshow {
-        margin-top: 50px;
+        margin-top: 30px;
 
         @include lg {
             width: 57.7%;

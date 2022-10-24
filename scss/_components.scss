@@ -80,11 +80,11 @@
 
     &__small {
         border: solid 14px #f8f6f1;
+        border-top: none;
         height: 49.5%;
         max-width: 39.755%;
         position: absolute;
         width: 100%;
-        border-top: none;
         z-index: 1;
     }
     &__big {
@@ -290,6 +290,10 @@
 
     &.--bottom-right-triangle {
         &::after {
+            $triangle_height: 93px;
+            border-bottom: $triangle_height solid #ebb017;
+            border-left: $triangle_height solid transparent;
+            border-right: $triangle_height solid transparent;
             bottom: 0;
             right: 0;
             transform: translate($triangle_height, $triangle_height) rotate(135deg);
@@ -522,19 +526,37 @@
         font-family: "Work Sans", sans-serif;
         height: 100%;
         list-style: none;
+        margin-top: 26px;
         padding: 0;
     }
 
     &__item {
-        color: #72908b;
-        counter-increment: Counter;
+        align-items: flex-start;
+        box-sizing: border-box;
         cursor: pointer;
         display: flex;
-        flex: 1 0;
+
+        &.--current {
+            .numbered-captions__text {
+                color: #053634;
+
+                &::before {
+                    color: #053634;
+                }
+            }
+        }
+    }
+
+    &__text {
+        align-items: center;
+        color: #72908b;
+        counter-increment: Counter;
+        display: flex;
         flex-flow: column;
         font-size: 0.725rem;
         font-weight: 400;
         line-height: 145%;
+        margin-top: 6px;
         text-transform: capitalize;
         transition: color 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -544,6 +566,7 @@
         }
 
         &::before {
+            align-self: flex-start;
             color: #72908b;
             content: "0" counter(Counter) ".";
             display: block;
@@ -558,25 +581,28 @@
                 margin-bottom: 0;
             }
         }
+    }
 
-        &.--current {
-            color: #053634;
+    &__item-1 {
+        padding-right: 5.908%;
+        width: 28.555%;
+    }
 
-            &::before {
-                color: #053634;
-            }
-        }
+    &__item-2 {
+        padding: 0 5.689%;
+        width: 40.809%;
+    }
+
+    &__item-3 {
+        flex: 0 0 auto;
+        padding-left: 5.798%;
+        width: 30.634%;
     }
 
     &__separator {
         background-color: #e0e2d8;
         height: 100%;
-        margin: 0 10px;
         width: 1px;
-
-        @include md {
-            margin: 0 30px;
-        }
     }
 }
 
