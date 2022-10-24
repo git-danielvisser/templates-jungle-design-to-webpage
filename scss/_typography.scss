@@ -13,6 +13,7 @@ html {
     margin: 0;
     padding: 0;
     text-transform: capitalize;
+    margin: 0 0 1.125rem 0;
 
     @include lg {
         font-size: 4.125rem;
@@ -29,6 +30,7 @@ html {
     font-size: 2.725rem;
     font-weight: 700;
     letter-spacing: 0.02em;
+    margin: 0 0 3.125rem 0;
     position: relative;
     text-transform: capitalize;
     transform-style: preserve-3d; // https://fjolt.com/article/css-make-child-appear-behind-parent
@@ -81,6 +83,7 @@ html {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 180%;
+    margin: 0 0 1.25rem 0;
     text-transform: capitalize;
 
     @include lg {
@@ -109,7 +112,15 @@ html {
     text-transform: uppercase;
 }
 
-p,
+p {
+    color: #053634;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 220%;
+    margin: 0 0 1.375rem 0;
+}
+
 span {
     color: #053634;
     font-family: "Work Sans", sans-serif;
