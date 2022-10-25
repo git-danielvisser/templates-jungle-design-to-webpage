@@ -195,14 +195,14 @@
     }
 
     @include xl {
-        padding: 168px;
+        padding: 168px 168px 89px;
     }
 
     &__image {
         margin-top: 60px;
 
         @include lg {
-            margin-top: none;
+            margin-top: 32px;
             width: 42.297%;
         }
     }
@@ -213,7 +213,12 @@
         @include lg {
             order: 2;
             width: 48.484%;
+            margin-top: -21px;
         }
+    }
+
+    &__submit {
+        margin-top: 60px;
     }
 }
 
@@ -228,7 +233,7 @@
     }
 
     @include xl {
-        padding: 168px;
+        padding: 89px 168px 168px;
     }
 
     &__introduction {
