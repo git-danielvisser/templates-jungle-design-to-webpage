@@ -165,14 +165,19 @@
     }
 
     @include xl {
-        padding: 168px;
+        padding: 150px 168px 139px;
+    }
+
+    &__title {
+        margin-bottom: 17px;
+        margin-top: 0;
     }
 
     &__testimonials {
         margin-top: 45px;
 
         @include lg {
-            margin-top: 75px;
+            margin-top: 77px;
         }
     }
 }

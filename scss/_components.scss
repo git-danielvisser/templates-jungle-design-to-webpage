@@ -683,7 +683,7 @@
     &__navigation {
         display: flex;
         justify-content: center;
-        margin-top: 60px;
+        margin-top: 52px;
     }
 
     &__dot {
@@ -722,7 +722,7 @@
     width: 100%;
 
     @include lg {
-        padding: 58px;
+        padding: 60px 55px 71px;
     }
 
     &__message {
@@ -741,10 +741,11 @@
         align-items: center;
         color: #053634;
         display: flex;
+        font-family: "Playfair Display", serif;
         font-size: 1.75rem;
         letter-spacing: 0.02em;
         line-height: 126%;
-        margin-top: 25px;
+        margin-top: 39px;
         text-transform: capitalize;
 
         &::before {
