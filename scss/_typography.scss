@@ -22,6 +22,10 @@ html {
     &.--letters-spaced {
         letter-spacing: 0.02em;
     }
+
+    &.--no-text-transform {
+        text-transform: none;
+    }
 }
 
 .h2 {

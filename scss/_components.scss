@@ -56,10 +56,21 @@
     }
 
     &.--big {
-        border: none;
         height: 74px;
         line-height: 82px;
         padding: 0 38px;
+    }
+
+    &.--huge {
+        color: #f8f6f1;
+        font-size: 1.125rem;
+        font-weight: 500;
+        height: 87px;
+        letter-spacing: 0.06em;
+        line-height: 82px;
+        padding: 0 78px;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
@@ -248,9 +259,9 @@
     &.--left-dot-pattern {
         &::before {
             content: url(/res/images/dots-darker.png);
-            left: 5.156%;
+            left: 7.556%;
             position: absolute;
-            top: 12.133%;
+            top: 23.033%;
             transform: rotate(45deg);
             z-index: -1;
         }

@@ -268,10 +268,11 @@
     }
 
     @include xl {
-        padding: 150px 326px;
+        padding: 151px 328px 123px;
     }
 
     &__message-headline {
+        margin-top: 4px;
         text-align: center;
 
         @include lg {
@@ -292,6 +293,8 @@
         margin-top: 20px;
 
         @include lg {
+            margin-right: 4px;
+            margin-bottom: 39px;
             margin-left: auto;
             margin-top: none;
         }
