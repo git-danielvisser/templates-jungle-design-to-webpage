@@ -134,7 +134,7 @@
     }
 
     @include xl {
-        padding: 168px;
+        padding: 185px 168px 200px;
     }
 
     &__introduction {
@@ -150,6 +150,10 @@
         @include lg {
             margin-top: 75px;
         }
+    }
+
+    &__view-more {
+        margin-top: 41px;
     }
 }
 

@@ -39,6 +39,10 @@ html {
         font-size: 3rem;
     }
 
+    &.--less-spacing {
+        margin: 0 0 1.75rem 0;
+    }
+
     &.--with-circle {
         &::after {
             $circle-diameter: 4rem;

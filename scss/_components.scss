@@ -222,7 +222,7 @@
     &.--double-dot-pattern {
         &::before {
             background-image: url(/res/images/dots.png), url(/res/images/dots.png);
-            background-position: left 1.197% top 18.73%, right 1.197% bottom 15.033%;
+            background-position: left 1.197% top 22%, right 1.197% bottom 18.2%;
             background-repeat: no-repeat, no-repeat;
             bottom: 0px;
             content: "";
@@ -282,6 +282,10 @@
 
     &.--bottom-left-triangle {
         &::after {
+            $triangle_height: 70px;
+            border-bottom: $triangle_height solid #ebb017;
+            border-left: $triangle_height solid transparent;
+            border-right: $triangle_height solid transparent;
             bottom: 0;
             left: 0;
             transform: translate(-$triangle_height, $triangle_height) rotate(-135deg);
@@ -610,15 +614,15 @@
     &__grid {
         display: grid;
         gap: 40px;
-        padding-top: 20px;
 
         @include lg {
-            gap: 72px;
+            gap: 70px;
             grid-template-columns: auto auto;
         }
 
         @include xl {
             grid-template-columns: auto auto auto;
+            padding-top: 30px;
         }
     }
 
