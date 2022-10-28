@@ -397,6 +397,7 @@
     display: flex;
     flex-flow: column;
     padding: 30px 34px;
+    align-items: center;
 
     @include lg {
         flex-flow: row;
