@@ -325,8 +325,8 @@
             "company-statement quick-links"
             "company-info  services";
         grid-template-columns: 40% 35%;
-        justify-content: space-between;
-        gap: 20px;
+        justify-content: space-around;
+        gap: 40px;
     }
 
     @include lg {
@@ -349,7 +349,7 @@
         grid-area: company-statement;
         text-align: center;
 
-        @include md {
+        @include lg {
             align-items: flex-start;
             display: flex;
             flex-flow: column;
@@ -369,7 +369,7 @@
         grid-area: quick-links;
         text-align: center;
 
-        @include md {
+        @include lg {
             text-align: left;
         }
     }
@@ -378,7 +378,7 @@
         grid-area: services;
         text-align: center;
 
-        @include md {
+        @include lg {
             text-align: left;
         }
     }
@@ -387,7 +387,7 @@
         grid-area: company-info;
         text-align: center;
 
-        @include md {
+        @include lg {
             text-align: left;
         }
     }
