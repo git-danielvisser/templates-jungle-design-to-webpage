@@ -171,6 +171,7 @@
 
 .list {
     list-style: none;
+    margin: 0;
     padding: 0;
 
     &__item {
@@ -184,6 +185,7 @@
 
     &.--with-dashes {
         .list__item {
+            line-height: 200%;
             padding-left: 18px;
             position: relative;
 
@@ -211,9 +213,9 @@
     display: flex;
     list-style: none;
     padding: 0;
+    margin-left: -34px;
 
     &__item {
-        font-size: 0.75rem;
         margin-left: 34px;
     }
 }
@@ -261,17 +263,17 @@
             content: url(/res/images/dots-darker.png);
             left: 7.556%;
             position: absolute;
-            top: 23.033%;
+            top: 23 33%;
             transform: rotate(45deg);
             z-index: -1;
         }
     }
 
-    $triangle_height: 73px;
     &.--top-right-triangle,
     &.--bottom-left-triangle,
     &.--bottom-right-triangle {
         &::after {
+            $triangle_height: 73px;
             border-bottom: $triangle_height solid #ebb017;
             border-left: $triangle_height solid transparent;
             border-right: $triangle_height solid transparent;
@@ -285,6 +287,10 @@
 
     &.--top-right-triangle {
         &::after {
+            $triangle_height: 87px;
+            border-bottom: $triangle_height solid #ebb017;
+            border-left: $triangle_height solid transparent;
+            border-right: $triangle_height solid transparent;
             right: 0;
             top: 0;
             transform: translate($triangle_height, 0) rotate(45deg);
@@ -323,7 +329,7 @@
 
     &__logo {
         margin-bottom: -1px;
-        margin-left: -2px;
+        margin-left: -1px;
     }
 
     &__name {
@@ -340,6 +346,7 @@
         letter-spacing: 0.075rem;
         line-height: 146%;
         margin-top: 1px;
+        margin-left: 1px;
         text-transform: uppercase;
     }
 
@@ -349,7 +356,7 @@
         font-size: 1.063rem;
         letter-spacing: 0.06em;
         line-height: 146%;
-        margin-left: 2px;
+        margin-left: 3px;
         margin-top: -3px;
         text-transform: capitalize;
     }
