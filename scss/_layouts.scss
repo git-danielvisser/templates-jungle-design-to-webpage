@@ -307,7 +307,7 @@
 
 .l-footer-block {
     display: grid;
-    gap: 20px;
+    gap: 60px;
     grid-template-areas:
         "company-statement"
         "quick-links"
@@ -325,6 +325,7 @@
             "company-info  services";
         grid-template-columns: 40% 35%;
         justify-content: space-between;
+        gap: 20px;
     }
 
     @include lg {
