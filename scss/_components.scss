@@ -629,17 +629,23 @@
 }
 
 .projects {
+    width: 100%;
+
     &__grid {
         display: grid;
         gap: 40px;
 
         @include md {
+            gap: 40px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include lg {
             gap: 70px;
-            grid-template-columns: auto auto;
         }
 
         @include xl {
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 1fr 1fr 1fr;
             padding-top: 30px;
         }
     }
