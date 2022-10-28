@@ -299,7 +299,7 @@
 
     &.--bottom-left-triangle {
         &::after {
-            $triangle_height: 70px;
+            $triangle_height: 74px;
             border-bottom: $triangle_height solid #ebb017;
             border-left: $triangle_height solid transparent;
             border-right: $triangle_height solid transparent;
@@ -425,7 +425,7 @@
 
         @include xl {
             align-self: flex-start;
-            padding: 182px 110px 170px 166px;
+            padding: 183px 110px 170px 168px;
             width: 37.864%;
         }
     }
@@ -434,7 +434,7 @@
         margin: 56px 0 60px 0;
 
         @include lg {
-            margin: 55px 0 35px 0;
+            margin: 54px 0 35px 0;
         }
     }
 
