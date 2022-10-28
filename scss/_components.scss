@@ -137,9 +137,27 @@
 }
 
 .email-field {
-    align-items: center;
     display: flex;
-    max-width: 686px;
+    flex-flow: column;
+    align-items: center;
+
+    @include sm {
+        display: flex;
+        flex-flow: row;
+        max-width: 686px;
+    }
+
+    &__submit {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+
+        @include sm {
+            margin-top: 0;
+            justify-content: initial;
+            width: initial;
+        }
+    }
 }
 
 .input {
