@@ -633,7 +633,7 @@
         display: grid;
         gap: 40px;
 
-        @include lg {
+        @include md {
             gap: 70px;
             grid-template-columns: auto auto;
         }
