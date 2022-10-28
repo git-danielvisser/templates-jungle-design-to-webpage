@@ -213,8 +213,8 @@
 .social-icons {
     display: flex;
     list-style: none;
-    padding: 0;
     margin-left: -34px;
+    padding: 0;
 
     &__item {
         margin-left: 34px;
@@ -346,8 +346,8 @@
         font-weight: 600;
         letter-spacing: 0.075rem;
         line-height: 146%;
-        margin-top: 1px;
         margin-left: 1px;
+        margin-top: 1px;
         text-transform: uppercase;
     }
 
@@ -583,7 +583,7 @@
         text-transform: capitalize;
         transition: color 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-        @include md {
+        @include xl {
             flex-flow: row;
             font-size: 1.125rem;
         }
@@ -600,7 +600,7 @@
             margin-right: 10px;
             text-transform: capitalize;
 
-            @include md {
+            @include xl {
                 margin-bottom: 0;
             }
         }
@@ -815,9 +815,9 @@
         }
 
         @include xl {
+            gap: 24px;
             grid-template-columns: 1fr 1fr 1fr;
             padding-top: 30px;
-            gap: 24px;
         }
     }
 }
