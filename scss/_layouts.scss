@@ -336,7 +336,7 @@
     }
 
     @include xl {
-        gap: 0px;
+        gap: 0;
         grid-template-areas: "company-statement . quick-links . services . company-info";
         grid-template-columns: 24% 15.439% auto 8.859% auto 6.284% auto;
         justify-content: start;
@@ -373,7 +373,7 @@
         }
 
         @include xl {
-            margin-top: 0px;
+            margin-top: 0;
         }
     }
 
@@ -387,7 +387,7 @@
         }
 
         @include xl {
-            margin-top: 0px;
+            margin-top: 0;
         }
     }
 
@@ -401,7 +401,7 @@
         }
 
         @include xl {
-            margin-top: 0px;
+            margin-top: 0;
         }
     }
 }
