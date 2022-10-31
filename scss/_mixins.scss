@@ -1,0 +1,10 @@
+@mixin absolute-triangle($triangle_height) {
+    border-bottom: $triangle_height solid #ebb017;
+    border-left: $triangle_height solid transparent;
+    border-right: $triangle_height solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    transform-origin: top;
+    width: 0;
+}

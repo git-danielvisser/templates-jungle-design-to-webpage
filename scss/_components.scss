@@ -1,4 +1,5 @@
 @import "_breakpoints";
+@import "_mixins";
 
 @keyframes button-icon-hint {
     0% {
@@ -288,28 +289,10 @@
         }
     }
 
-    &.--top-right-triangle,
-    &.--bottom-left-triangle,
-    &.--bottom-right-triangle {
-        &::after {
-            $triangle_height: 73px;
-            border-bottom: $triangle_height solid #ebb017;
-            border-left: $triangle_height solid transparent;
-            border-right: $triangle_height solid transparent;
-            content: "";
-            height: 0;
-            position: absolute;
-            transform-origin: top;
-            width: 0;
-        }
-    }
-
     &.--top-right-triangle {
         &::after {
             $triangle_height: 87px;
-            border-bottom: $triangle_height solid #ebb017;
-            border-left: $triangle_height solid transparent;
-            border-right: $triangle_height solid transparent;
+            @include absolute-triangle($triangle_height);
             right: 0;
             top: 0;
             transform: translate($triangle_height, 0) rotate(45deg);
@@ -318,10 +301,8 @@
 
     &.--bottom-left-triangle {
         &::after {
-            $triangle_height: 74px;
-            border-bottom: $triangle_height solid #ebb017;
-            border-left: $triangle_height solid transparent;
-            border-right: $triangle_height solid transparent;
+            $triangle_height: 72px;
+            @include absolute-triangle($triangle_height);
             bottom: 0;
             left: 0;
             transform: translate(-$triangle_height, $triangle_height) rotate(-135deg);
@@ -331,9 +312,7 @@
     &.--bottom-right-triangle {
         &::after {
             $triangle_height: 93px;
-            border-bottom: $triangle_height solid #ebb017;
-            border-left: $triangle_height solid transparent;
-            border-right: $triangle_height solid transparent;
+            @include absolute-triangle($triangle_height);
             bottom: 0;
             right: 0;
             transform: translate($triangle_height, $triangle_height) rotate(135deg);
