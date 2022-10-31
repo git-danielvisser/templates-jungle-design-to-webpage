@@ -23,20 +23,20 @@ class Brands {
 
     moveToNextBrand() {
         const listEle = document.querySelector(`.${LIST__CLASS}`)
-        const itemWidthPixels = document.querySelector(`.${ITEM__CLASS}`).offsetWidth;
+        const itemWidth = document.querySelector(`.${ITEM__CLASS}`).offsetWidth;
        
         let nextBrand = this.currentBrand + 1;
         nextBrand = (nextBrand < this.brandsAmount) ? nextBrand : 0;
 
         if (nextBrand !== 0) {
             // Move to next brand
-            const offset = -(nextBrand * itemWidthPixels);
-            listEle.style.transform = `translateX(${offset}px)`;
+            const offsetX = -(nextBrand * itemWidth);
+            listEle.style.transform = `translateX(${offsetX}px)`;
             this.currentBrand = nextBrand;
         } else {
             // Move from the last original brand to the first cloned brand
-            const offset = -(this.brandsAmount * itemWidthPixels);
-            listEle.style.transform = `translateX(${offset}px)`;
+            const offsetX = -(this.brandsAmount * itemWidth);
+            listEle.style.transform = `translateX(${offsetX}px)`;
 
             // Flash back to the first original brand, without any animations
             // This seamless transition gives the illusion of inifite movement
