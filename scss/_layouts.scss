@@ -324,7 +324,7 @@
         grid-template-areas:
             "company-statement quick-links"
             "company-info  services";
-        grid-template-columns: 40% 35%;
+        grid-template-columns: 1fr 1fr;
         justify-content: space-around;
         gap: 40px;
     }
@@ -334,15 +334,16 @@
         grid-template-areas:
             "company-statement . ."
             "quick-links services company-info";
-        grid-template-columns: 33.333% 33.333% 33.333%;
+        grid-template-columns: 1fr 1fr 1fr;
         padding: 68px;
     }
 
     @include xl {
         grid-template-areas: "company-statement . quick-links . services . company-info";
-        grid-template-columns: 24.09% 12.839% auto 6.359% auto 3.684% auto;
+        grid-template-columns: 24% 15.439% auto 8.859% auto 6.284% auto;
         padding: 170px 168px 77px;
         justify-content: start;
+        gap: 0px;
     }
 
     &__company-statement {
@@ -371,6 +372,11 @@
 
         @include lg {
             text-align: left;
+            margin-top: 20px;
+        }
+
+        @include xl {
+            margin-top: 0px;
         }
     }
 
@@ -380,6 +386,11 @@
 
         @include lg {
             text-align: left;
+            margin-top: 20px;
+        }
+
+        @include xl {
+            margin-top: 0px;
         }
     }
 
@@ -389,6 +400,11 @@
 
         @include lg {
             text-align: left;
+            margin-top: 20px;
+        }
+
+        @include xl {
+            margin-top: 0px;
         }
     }
 }
@@ -402,7 +418,7 @@
 
     @include lg {
         flex-flow: row;
-        padding: 40px 68px;
+        padding: 25px 68px;
     }
 
     @include xl {
@@ -412,6 +428,10 @@
     &__copyright {
         margin-top: 20px;
         text-align: center;
+
+        @include xl {
+            margin-top: 2px;
+        }
     }
 
     &__social-media {
