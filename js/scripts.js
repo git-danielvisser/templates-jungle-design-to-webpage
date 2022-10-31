@@ -7,7 +7,6 @@ const brandsEle = document.querySelector('.brands');
 const brands = new Brands(brandsEle);
 brands.start();
 
-
 const slideshowEle = document.querySelector('.slideshow');
 const slideshow = new Slideshow(slideshowEle);
 slideshow.start();
