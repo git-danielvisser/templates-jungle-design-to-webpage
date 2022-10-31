@@ -46,7 +46,7 @@
         }
     }
 
-    &.--primary {
+    &.--alt-color {
         background-color: #053634;
         border: none;
         color: #f8f6f1;
@@ -137,9 +137,9 @@
 }
 
 .email-field {
+    align-items: center;
     display: flex;
     flex-flow: column;
-    align-items: center;
 
     @include sm {
         display: flex;
@@ -148,13 +148,13 @@
     }
 
     &__submit {
-        width: 100%;
         justify-content: center;
         margin-top: 20px;
+        width: 100%;
 
         @include sm {
-            margin-top: 0;
             justify-content: initial;
+            margin-top: 0;
             width: initial;
         }
     }
