@@ -216,9 +216,9 @@
         order: -1;
 
         @include lg {
+            margin-top: -21px;
             order: 2;
             width: 48.484%;
-            margin-top: -21px;
         }
     }
 
@@ -298,10 +298,7 @@
         margin-top: 20px;
 
         @include lg {
-            margin-right: 4px;
-            margin-bottom: 39px;
-            margin-left: auto;
-            margin-top: none;
+            margin: 0 4px 39px auto;
         }
     }
 }
@@ -321,12 +318,12 @@
 
     @include md {
         display: grid;
+        gap: 40px;
         grid-template-areas:
             "company-statement quick-links"
             "company-info  services";
         grid-template-columns: 1fr 1fr;
         justify-content: space-around;
-        gap: 40px;
     }
 
     @include lg {
@@ -339,11 +336,11 @@
     }
 
     @include xl {
+        gap: 0px;
         grid-template-areas: "company-statement . quick-links . services . company-info";
         grid-template-columns: 24% 15.439% auto 8.859% auto 6.284% auto;
-        padding: 170px 168px 77px;
         justify-content: start;
-        gap: 0px;
+        padding: 170px 168px 77px;
     }
 
     &__company-statement {
@@ -371,8 +368,8 @@
         text-align: center;
 
         @include lg {
-            text-align: left;
             margin-top: 20px;
+            text-align: left;
         }
 
         @include xl {
@@ -385,8 +382,8 @@
         text-align: center;
 
         @include lg {
-            text-align: left;
             margin-top: 20px;
+            text-align: left;
         }
 
         @include xl {
@@ -399,8 +396,8 @@
         text-align: center;
 
         @include lg {
-            text-align: left;
             margin-top: 20px;
+            text-align: left;
         }
 
         @include xl {
@@ -410,11 +407,11 @@
 }
 
 .l-footer-bar {
+    align-items: center;
     border-top: 1px solid #e5e7dd;
     display: flex;
     flex-flow: column;
     padding: 30px 34px;
-    align-items: center;
 
     @include lg {
         flex-flow: row;
