@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0"
   }
 }
