@@ -12,6 +12,7 @@
 
     @include xl {
         padding: 0px 168px;
+        height: 130px;
     }
 
     &__branding {
@@ -43,7 +44,7 @@
         display: flex;
         justify-content: center;
         margin-right: -10px;
-        margin-top: 5px;
+        margin-top: 3px;
     }
 }
 
@@ -61,7 +62,7 @@
     }
 
     @include xl {
-        padding: 168px 168px 197px;
+        padding: 168px 168px 194px;
     }
 
     &__image-pair {
