@@ -205,18 +205,15 @@
 
     &.--with-dashes {
         .list__item {
-            display: flex;
             line-height: 200%;
             padding-left: 18px;
-            position: relative;
-            align-items: center;
 
             &::before {
                 background-color: #dddfd5;
                 content: "";
                 display: inline-block;
                 height: 1px;
-                margin-bottom: -0.1rem;
+                margin-bottom: 0.25rem;
                 margin-left: -18px;
                 margin-right: 8px;
                 width: 10px;
