@@ -1,4 +1,3 @@
-const SCREEN_SM = 576;  // Small tablets and large smartphones (landscape view)
 const SCREEN_MD = 768;  // Small tablets (portrait view)
 const SCREEN_LG = 992;  // Tablets and small desktops
 const SCREEN_XL = 1600; // Large tablets and desktops
