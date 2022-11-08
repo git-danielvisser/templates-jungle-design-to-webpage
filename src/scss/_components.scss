@@ -253,7 +253,7 @@
 
     &.--double-dot-pattern {
         &::before {
-            background-image: url(res/images/dots.png), url(res/images/dots.png);
+            background-image: url(res/images/dots.webp), url(res/images/dots.webp);
             background-position: left 1.197% top 22%, right 1.197% bottom 18.2%;
             background-repeat: no-repeat, no-repeat;
             bottom: 0;
@@ -269,7 +269,7 @@
     &.--bottom-right-dot-pattern {
         &::before {
             bottom: 0;
-            content: url(res/images/dots.png);
+            content: url(res/images/dots.webp);
             position: absolute;
             right: -85px;
             transform: rotate(45deg);
@@ -279,7 +279,7 @@
 
     &.--left-dot-pattern {
         &::before {
-            content: url(res/images/dots-darker.png);
+            content: url(res/images/dots-darker.webp);
             left: 7.556%;
             position: absolute;
             top: 23 33%;
