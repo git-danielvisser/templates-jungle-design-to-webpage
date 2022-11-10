@@ -38,6 +38,10 @@ class Testimonials {
       100
     );
     window.addEventListener("resize", () => {
+      const previousWindowWidth = this._windowWidth;
+      this._windowWidth = window.innerWidth;
+      if (previousWindowWidth === this._windowWidth) return;
+
       this._adaptToScreenSizeChange();
     });
   }
