@@ -1,4 +1,4 @@
-import loadingAttributePolyfill from "/node_modules/loading-attribute-polyfill/dist/loading-attribute-polyfill.module.js";
+import "/node_modules/loading-attribute-polyfill/dist/loading-attribute-polyfill.module.js";
 import { Brands } from "./brands.js";
 import { Slideshow } from "./slideshow.js";
 import { Testimonials } from "./testimonials.js";
