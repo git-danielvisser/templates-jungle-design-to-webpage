@@ -6,7 +6,7 @@ Desktop webdesign from TemplatesJungle hand-coded to responsive webpage with HTM
 
 :point_right: View the [responsive webpage.](https://git-danielvisser.github.io/templates-jungle-design-to-webpage/ "responsive webpage.")
 
-
+:heavy_check_mark: [W3C Markup Validation Service](https://validator.w3.org/nu/?doc=https://git-danielvisser.github.io/templates-jungle-design-to-webpage/)
 
 :alarm_clock: [Google PageSpeed Insights](https://pagespeed.web.dev/report?url=https://git-danielvisser.github.io/templates-jungle-design-to-webpage/&form_factor=desktop)
 
